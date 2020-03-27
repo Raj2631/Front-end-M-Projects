@@ -21,12 +21,13 @@ body {
 }
 
 .logo {
+  width: 200px;
+  height: 65px;
   margin: 2rem 0;
 }
 
 .flex {
   display: flex;
-  flex: 1;
   align-items: center;
 }
 
@@ -67,9 +68,7 @@ ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  position: absolute;
-  bottom: 20px;
-  right: 50px;
+  margin-right: 50px;
 }
 
 ul a {
@@ -83,4 +82,45 @@ ul a {
   justify-content: center;
   align-items: center;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .flex {
+    flex-direction: column;
+    margin: 0 10px;
+  }
+
+  .flex-item2 {
+    text-align: center;
+  }
+
+  .logo {
+    width: 200px;
+    height: 40px;
+  }
+
+  .flex-item1,
+  .flex-item2 {
+    flex: 1;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  ul {
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 0;
+  }
+
+  ul a {
+    margin: 0 3px;
+  }
 }
